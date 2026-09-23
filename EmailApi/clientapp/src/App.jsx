@@ -6,7 +6,7 @@ import Home from "./pages/Home"; import Courses from "./pages/Courses"; import A
 
 function Navbar(){
   const [open,setOpen]=useState(false);
-  const links=[["Home","/"],["Courses","/courses"],["About","/about"],["Gallery","/gallery"],["Admission","/admission"],["Admin","/admin"],["Contact","/contact"]];
+  const links=[["Home","/"],["Courses","/courses"],["About","/about"],["Gallery","/gallery"],["Admission","/admission"],["Contact","/contact"]];
 
   return <>
     <AppBar position="sticky" sx={{background:"rgba(15, 23, 42, 0.82)",backdropFilter:"blur(14px)",boxShadow:"0 8px 30px rgba(15,23,42,0.15)"}}>
