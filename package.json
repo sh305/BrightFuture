@@ -1,0 +1,16 @@
+{
+  "name": "computer-coaching-center",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix EmailApi/clientapp run dev",
+    "build": "npm --prefix EmailApi/clientapp run build",
+    "dev:frontend": "npm --prefix EmailApi/clientapp run dev",
+    "dev:api": "dotnet run --project EmailApi/EmailApi.csproj",
+    "dev:all": "concurrently -k \"npm:dev:frontend\" \"npm:dev:api\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

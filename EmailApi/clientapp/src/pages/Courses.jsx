@@ -1,0 +1,2 @@
+import React from "react"; import {Container,Grid,Typography} from "@mui/material"; import CourseCard from "../components/CourseCard"; import {courses} from "../data";
+export default function Courses(){return <Container sx={{py:7}}><Typography variant="h2" textAlign="center">Our Courses</Typography><Typography textAlign="center" color="text.secondary" sx={{mt:1,mb:5}}>Choose a course and start building your skills.</Typography><Grid container spacing={3}>{courses.map(c=><Grid item xs={12} sm={6} md={4} key={c.id}><CourseCard course={c}/></Grid>)}</Grid></Container>}

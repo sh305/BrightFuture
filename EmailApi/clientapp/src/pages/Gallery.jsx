@@ -1,0 +1,3 @@
+import React from "react"; import {Container,Grid,Paper,Typography,Box} from "@mui/material";
+const imgs=["Computer Lab","Practical Class","Students Learning","Certificate Ceremony","Web Development","Accounting Lab"];
+export default function Gallery(){return <Container sx={{py:7}}><Typography variant="h2" textAlign="center">Gallery</Typography><Grid container spacing={3} sx={{mt:3}}>{imgs.map((x,i)=><Grid item xs={12} sm={6} md={4} key={x}><Paper className="galleryBox"><Box className="galleryIcon">💻</Box><Typography variant="h6" fontWeight={700}>{x}</Typography><Typography color="text.secondary">Institute activity</Typography></Paper></Grid>)}</Grid></Container>}

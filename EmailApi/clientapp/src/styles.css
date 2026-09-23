@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  color: #0f172a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 80px;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 48%, #38bdf8 100%);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: -80px;
+}
+
+.hero::after {
+  width: 540px;
+  height: 540px;
+  left: -160px;
+  bottom: -220px;
+}
+
+.course-marquee {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.course-marquee-track {
+  animation: marquee-left 25s linear infinite;
+}
+
+.course-marquee:hover .course-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.galleryBox {
+  height: 230px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.galleryIcon {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.MuiButton-root,
+.MuiPaper-root {
+  transition: all 0.2s ease;
+}
