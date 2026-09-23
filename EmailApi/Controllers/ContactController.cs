@@ -11,7 +11,7 @@ public class ContactController(
     ILogger<ContactController> logger,
     IWebHostEnvironment environment) : ControllerBase
 {
-    //
+    // Post Method
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] ContactRequest request)
     {
